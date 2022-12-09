@@ -1,0 +1,54 @@
+body {
+    background-color: #222222;
+}
+
+.datetime {
+    font-size: 16px;
+    padding: 24px;
+    color: #FFFFFF;
+    background: #444444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border-right: 10px #009578 solid;
+    width: 400px;
+    font-family: sans-serif;
+}
+
+.time {
+    font-size: 3em;
+    color: #00FFCC;
+}
+
+.date {
+    margin-top: 12px;
+    font-size: 1.75em;
+}
+
+h1 {
+    color: #00FFCC;
+}
+
+h2 {
+    color: #00FFCC;
+}
+
+input {
+    appearance: none;
+    color: #1D1D1D;
+    font-family: “Helvetica”, arial, sans-serif;
+    font-size: 18px;
+    border: 1px solid #ECF0F1;
+    background: #ECF0F1;
+    padding: 4px;
+    display: inline-block;
+    visibility: visible;
+    width: 140px;
+}
+
+form {
+    color: white;
+}
+
+ol {
+    color: white;
+}
