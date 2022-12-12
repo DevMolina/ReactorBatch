@@ -14,52 +14,66 @@
 </head>
 
 <body>
-    <h1>Configuración Reactor Batch</h1>
+
+    <header>
+        <nav class="navbar" style="background-color: aliceblue;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                  <img src="img/logo.png" alt="Logo" width="40"  class="d-inline-block align-text-top">
+                  Reactor Batch
+                </a>
+              </div>
+        </nav>
+    </header>
+
+    <!-- <h1>Configuración Reactor Batch</h1> -->
+    <!-- Fecha y hora -->
     <div class="datetime">
         <div class="time"></div>
+        <!-- <p>Hoy es:</p> -->
         <div class="date"></div>
     </div>
     <!-- Formulario -->
-    <form>
-        <div class="mb-3">
-            <label class="form-label">Fecha:</label>
-            <input type="date" id="fecha" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Hora:</label>
-            <input type="time" id="horaInicio" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Tiempo Llenado (minutos):</label>
-            <input type="number" id="tiempoLLenado" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Tiempo Aireado (minutos):</label>
-            <input type="number" id="tiempoAireado" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Tiempo Decantación (minutos):</label>
-            <input type="number" id="tiempoDecantacion" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Tiempo Vaciado (minutos):</label>
-            <input type="number" id="tiempoVaciado" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Cantidad de Ciclos:</label>
-            <input type="number" id="ciclos" class="form-control">
-        </div>
-        <button type="button" onclick="configurar()" class="btn btn-primary">Configurar</button>
-    </form>
+    <section class="formulario">
+        <form>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha:</label>
+                <input type="date" id="fecha" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="horaInicio" class="form-label">Hora:</label>
+                <input type="time" id="horaInicio" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="tiempoLlenado" class="form-label">Tiempo Llenado (minutos):</label>
+                <input type="number" id="tiempoLLenado" class="form-control" required> 
+            </div>
+            <div class="mb-3">
+                <label for="tiempoAireado" class="form-label">Tiempo Aireado (minutos):</label>
+                <input type="number" id="tiempoAireado" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="tiempoDecantacion" class="form-label">Tiempo Decantación (minutos):</label>
+                <input type="number" id="tiempoDecantacion" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="tiempoVaciado" class="form-label">Tiempo Vaciado (minutos):</label>
+                <input type="number" id="tiempoVaciado" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="ciclos" class="form-label">Cantidad de Ciclos:</label>
+                <input type="number" id="ciclos" class="form-control" required>
+            </div>
+            <button type="button" onclick="configurar()" class="btn btn-primary">Configurar</button>
+        </form>
+    </section>
     <!-- Listado -->
-    <div>
-        <ol id="list">
+    <section class="listado-fechas">
+        <div class="listado-cards">
 
-        </ol>
-
-    </div>
-
-
+        </div>
+    </section>
+    
 
     <h1 id="mostrarFecha"></h1>
     <!-- Script -->

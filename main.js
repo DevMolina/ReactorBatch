@@ -5,12 +5,12 @@ const fecha = document.getElementById("fecha");
 const mostrarFecha = document.getElementById("mostrarFecha")
 
 const date = new Date();
+const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 
 const formatFecha = (fecha) => {
     const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-    const dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
-    return `${dias[fecha.getDay() - 1]} ${fecha.getDate()} de ${meses[fecha.getMonth()]} del ${fecha.getFullYear()}`;
-    // , `;
+    const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado'];
+    return `${dias[fecha.getDay()]} ${fecha.getDate()} de ${meses[fecha.getMonth()]} del ${fecha.getFullYear()}`;
 }
 
 const formatHour = (fecha) => {
@@ -72,20 +72,24 @@ function configurar() {
         console.log(t3);
         console.log(t4);
         html += `
-            <li>Ciclo ${i}</li>
-            <ul>
-                <li>Inicio: ${t0.toLocaleString()}</li>
-                <li>Llenado:  ${t1.toLocaleString()}</li>
-                <li>Aireado ${t2.toLocaleString()}</li>
-                <li>Decantación ${t3.toLocaleString()}</li>
-                <li>Vaciado ${t4.toLocaleString()}</li>
+        <div class="card card-list" style="width: 18rem;">
+            <div class="card-header cart-title">
+                Ciclo ${i}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Inicio: ${t0.toLocaleDateString('es-ES',options)} ${formatHour(t0)}</li>
+                <li class="list-group-item">Llenado: ${t0.toLocaleDateString('es-ES',options)} ${formatHour(t1)}</li>
+                <li class="list-group-item">Aireado: ${t0.toLocaleDateString('es-ES',options)} ${formatHour(t2)}</li>
+                <li class="list-group-item">Decantación: ${t0.toLocaleDateString('es-ES',options)} ${formatHour(t3)}</li>
+                <li class="list-group-item">Vaciado: ${t0.toLocaleDateString('es-ES',options)} ${formatHour(t4)}</li>
             </ul>
+        </div>
         
         `;
         t0 = t4;
     }
 
-    document.getElementById("list").innerHTML = html;
+    document.getElementsByClassName("listado-cards")[0].innerHTML = html;
 
 }
 

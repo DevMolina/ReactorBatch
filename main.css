@@ -2,6 +2,12 @@ body {
     background-color: #222222;
 }
 
+.formulario {
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+}
+
 .datetime {
     font-size: 16px;
     padding: 24px;
@@ -12,6 +18,8 @@ body {
     border-right: 10px #009578 solid;
     width: 400px;
     font-family: sans-serif;
+    margin: 20px 20%;
+
 }
 
 .time {
@@ -26,6 +34,8 @@ body {
 
 h1 {
     color: #00FFCC;
+    text-align: center;
+    margin: 20px;
 }
 
 h2 {
@@ -45,10 +55,19 @@ input {
     width: 140px;
 }
 
-form {
-    color: white;
+.cart-title {
+    background-color: #444444;
+    color: #00FFCC;
+    font-size: 18px;
 }
 
-ol {
-    color: white;
+.listado-cards {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-list{
+    display: inline-block;
+    margin: 1em;
+    border: none;
 }
